@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './dummy_data.dart';
-import './category_item.dart';
+import '../dummy_data.dart';
+import '../widgets/category_card.dart';
 
 // this is the homepage
 class CategoriesScreen extends StatelessWidget {
