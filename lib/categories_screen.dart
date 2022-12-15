@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './dummy_data.dart';
 import './category_item.dart';
 
+// this is the homepage
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
@@ -23,6 +24,7 @@ class CategoriesScreen extends StatelessWidget {
         children: DUMMY_CATEGORIES
             .map(
               (catData) => CategoryItem(
+                id: catData.id,
                 title: catData.title,
                 color: catData.color,
               ),
