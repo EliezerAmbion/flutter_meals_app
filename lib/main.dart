@@ -13,16 +13,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
-            .copyWith(secondary: Colors.amber),
+        colorScheme:
+            ColorScheme.fromSwatch(primarySwatch: Colors.blueGrey).copyWith(
+          primary: Colors.blueGrey[900],
+          secondary: Colors.teal[500],
+        ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'RaleWay',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: const TextStyle(
-                color: Color.fromRGBO(20, 51, 51, 1),
+                color: Colors.white,
               ),
               bodyText2: const TextStyle(
-                color: Color.fromRGBO(20, 51, 51, 1),
+                color: Colors.white,
               ),
               headline6: const TextStyle(
                 fontSize: 20,
