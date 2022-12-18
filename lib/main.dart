@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/meal_detail_screen.dart';
 import 'screens/category_meals_screen.dart';
 import 'screens/categories_screen.dart';
+import 'screens/tabs_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSwatch(primarySwatch: Colors.blueGrey).copyWith(
           primary: Colors.blueGrey[900],
           secondary: Colors.teal[500],
+          tertiary: Colors.tealAccent[400],
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'RaleWay',
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: CategoriesScreen(),
       routes: {
-        '/': (ctx) => CategoriesScreen(),
+        '/': (ctx) => const TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
