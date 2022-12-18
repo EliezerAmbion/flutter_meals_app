@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'RaleWay',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: const TextStyle(
-                color: Colors.white,
+                color: Colors.black54,
               ),
               bodyText2: const TextStyle(
                 color: Colors.white,
