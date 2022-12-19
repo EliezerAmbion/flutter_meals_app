@@ -5,8 +5,6 @@ import 'categories_screen.dart';
 import 'favorites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({super.key});
-
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
@@ -31,7 +29,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
-      drawer: const MainDrawer(),
+      drawer: const MainDrawer(), // Drawer
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,

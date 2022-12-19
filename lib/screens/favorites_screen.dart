@@ -8,7 +8,6 @@ class FavoritesScreen extends StatelessWidget {
     return const Center(
       child: Text(
         'Favorites',
-        style: TextStyle(backgroundColor: Colors.black),
       ),
     );
   }

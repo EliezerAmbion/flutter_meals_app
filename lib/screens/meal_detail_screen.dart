@@ -5,8 +5,6 @@ import '/dummy_data.dart';
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
-  const MealDetailScreen({super.key});
-
   buildSectionTitle(BuildContext context, String text) {
     return Align(
       alignment: Alignment.centerLeft,
