@@ -86,6 +86,19 @@ class MealDetailScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // pop remove the screen that is on top of the stack
+          // you can pass any data in pop
+          // this is just a use-case for popping a screen.
+          // max, in udemy haven't thought of anything that can be popped so
+          // he just created it here.
+          Navigator.of(context).pop(mealId);
+        },
+        child: const Icon(
+          Icons.delete,
+        ),
+      ),
     );
   }
 }

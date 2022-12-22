@@ -11,6 +11,7 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
+  final Function removeMeal;
 
   MealItem({
     required this.id,
@@ -19,6 +20,7 @@ class MealItem extends StatelessWidget {
     required this.duration,
     required this.complexity,
     required this.affordability,
+    required this.removeMeal,
   });
 
   String get complexityText {
@@ -48,10 +50,21 @@ class MealItem extends StatelessWidget {
   }
 
   void selectMeal(BuildContext context) {
-    Navigator.of(context).pushNamed(
+    Navigator.of(context)
+        .pushNamed(
       MealDetailScreen.routeName,
       arguments: id,
-    );
+      // .then is not the typical promise that is used in javascript.
+      // .then is executed when you go back to this screen.
+      // i.e. when the MealDetailScreen is popped, and then the .then method will be executed.
+      // NOTE: The result in the .then method is the data you passed in the .pop method, i.e. in MealDetailScreen.
+      // NOTE: You will not see the result if you use the back button.
+    )
+        .then((result) {
+      if (result != null) {
+        removeMeal(result);
+      }
+    });
   }
 
   @override
