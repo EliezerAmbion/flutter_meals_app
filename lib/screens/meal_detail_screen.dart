@@ -5,6 +5,15 @@ import '/dummy_data.dart';
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
+  final Function toggleFavorite;
+  final Function isMealFavorite;
+
+  const MealDetailScreen({
+    super.key,
+    required this.toggleFavorite,
+    required this.isMealFavorite,
+  });
+
   buildSectionTitle(BuildContext context, String text) {
     return Align(
       alignment: Alignment.centerLeft,
@@ -87,16 +96,9 @@ class MealDetailScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // pop remove the screen that is on top of the stack
-          // you can pass any data in pop
-          // this is just a use-case for popping a screen.
-          // max, in udemy haven't thought of anything that can be popped so
-          // he just created it here.
-          Navigator.of(context).pop(mealId);
-        },
-        child: const Icon(
-          Icons.delete,
+        onPressed: () => toggleFavorite(mealId),
+        child: Icon(
+          isMealFavorite(mealId) ? Icons.star : Icons.star_border,
         ),
       ),
     );
